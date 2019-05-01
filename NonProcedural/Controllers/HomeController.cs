@@ -14,5 +14,11 @@ namespace NonProcedural.Controllers
 
             return View();
         }
+
+        public ActionResult Create()
+        {
+            ViewBag.Title = "Create";
+            return View();
+        }
     }
 }
