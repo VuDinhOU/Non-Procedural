@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CCLogModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CheckInCount">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="HPNumber" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="CheckInDay" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="CCLogEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CheckInCounts" EntityType="Self.CheckInCount" />
+  </EntityContainer>
+</Schema>

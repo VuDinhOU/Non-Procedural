@@ -16,7 +16,7 @@ namespace NonProcedural
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller ="CheckInCounts", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
