@@ -1,15 +1,63 @@
-﻿<div class="jumbotron">
-    <h1>Anime Galore </h1>
-    <p class="lead">Anime Galore is a free website where you can enjoy the latest anime updates here for FREE!</p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p> If you enter the anime tab, you can watch the latest anime news!</p>
-
+﻿@*<div class="jumbotron">
+        <h1>Anime Galore </h1>
+        <p class="lead">Anime Galore is a free website where you can enjoy the latest anime updates here for FREE!</p>
     </div>
-    @*<div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p> If you enter the anime tab, you can watch the latest anime news!</p>
+
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        </div>
     </div>*@
-</div>
+
+@{
+    ViewBag.Title = "Home Page";
+    if (Session["Username"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+    <header class="w3-container w3-pale-red w3-center" style="padding:105px 16px">
+        <h1 class="w3-margin w3-jumbo">Deals of the day</h1>
+    </header>
+
+    <p></p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">EASTER FLASH SALE! $10 ONLY ! <button type="submit">Add to Cart</button></div>
+                    <div class="panel-body"><img src="https://cdn.designbyhumans.com/product_images/p/1146155.2c9.32942S7YyNAAA-650x650-b-p.png" class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="panel-footer"><b> Sale Ends in ... </b> <iframe src="http://free.timeanddate.com/countdown/i6qecwu4/n184/cf11/cm0/cu4/ct0/cs0/ca0/co0/cr0/ss0/cac000/cpc000/pceee/tcfff/fs90/szw256/szh108/iso2019-05-01T00:00:00/pd2" allowTransparency="true" frameborder="0" width="210" height="14"></iframe> </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">EASTER FLASH SALE! $12 ONLY ! <button type="submit">Add to Cart</button></div>
+                    <div class="panel-body"><img src="https://i.ebayimg.com/thumbs/images/m/mDvT7O6Omt2gOatGZzYx4_g/s-l225.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="panel-footer"><b> Sale Ends in ... </b> <iframe src="http://free.timeanddate.com/countdown/i6qecwu4/n184/cf11/cm0/cu4/ct0/cs0/ca0/co0/cr0/ss0/cac000/cpc000/pceee/tcfff/fs90/szw256/szh108/iso2019-05-01T00:00:00/pd2" allowTransparency="true" frameborder="0" width="210" height="14"></iframe></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">EASTER FLASH SALE! $10 ONLY ! <button type="submit">Add to Cart</button></div>
+                    <div class="panel-body"><img src="https://cdn.shopify.com/s/files/1/0174/7635/4112/products/mockup-e144db19_1600x.png?v=1550649540" class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="panel-footer"> <b> Sale Ends in ...</b> <iframe src="http://free.timeanddate.com/countdown/i6qecwu4/n184/cf11/cm0/cu4/ct0/cs0/ca0/co0/cr0/ss0/cac000/cpc000/pceee/tcfff/fs90/szw256/szh108/iso2019-05-01T00:00:00/pd2" allowTransparency="true" frameborder="0" width="210" height="14"></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+</body>
+</html>

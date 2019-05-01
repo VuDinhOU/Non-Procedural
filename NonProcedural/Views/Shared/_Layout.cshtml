@@ -1,38 +1,87 @@
-﻿<!DOCTYPE html>
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <title>@ViewBag.Title </title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">MIS Project</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="@Url.Action("Index","Home")" class="elements">Home</a></li>
+
+                    <li><a href="@Url.Action("Anime","Anime")" class="elements">All Anime</a></li>
+                    <li><a href="@Url.Action("Seasons","Seasons")" class="elements">Top Anime</a></li>
+                    <li><a href="@Url.Action("Index","CheckInCounts")" class="elements">Check In</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - CreAsian</p>
+        </footer>
+
+
+
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - UwU Store</title>
+    @*@Styles.Render("~/Content/css")*@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <title>@ViewBag.Title </title>
-    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     @Scripts.Render("~/bundles/modernizr")
 </head>
+
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">MIS Project</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="@Url.Action("Index","Home")" class="elements">Home</a></li>
-
-                <li><a href="@Url.Action("Anime","Anime")" class="elements">All Anime</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="@Url.Action("Seasons","Seasons")" class="elements">Current Season</a></li>
-            </ul>
+    <header class="w3-container w3-red w3-center" style="padding:20px 0px">
+        <div class="container text-center">
+            <img src="https://i.imgur.com/XMPwKem.png" class="img-responsive" style="width:100%" alt="Image" />
         </div>
+    </header>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Product", "Product", "Home")</li>
+                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    <li>@Html.ActionLink("Shipping Policy", "Policy", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                </ul>
+            </div>
+        </div>
+
+
     </nav>
 
+
     @RenderBody()
-    <hr />
-    <footer>
-        <p>&copy; @DateTime.Now.Year - CreAsian</p>
+    <footer class="container-fluid text-right">
+        <p>UwU Store Copyright © </p>
     </footer>
-
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
