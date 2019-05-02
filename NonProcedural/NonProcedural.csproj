@@ -170,7 +170,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CheckInCountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -193,24 +192,6 @@
     <Compile Include="Models\CheckInCount.cs">
       <DependentUpon>CheckIn.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StoreLogin.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoreLogin.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StoreLogin.cs">
-      <DependentUpon>StoreLogin.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StoreLogin.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoreLogin.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StoreLogin1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StoreLogin.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,16 +212,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CheckIn.edmx</DependentUpon>
       <LastGenOutput>CheckIn.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\StoreLogin.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StoreLogin.edmx</DependentUpon>
-      <LastGenOutput>StoreLogin.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\StoreLogin.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StoreLogin.edmx</DependentUpon>
-      <LastGenOutput>StoreLogin1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -270,13 +241,6 @@
     <Content Include="Models\CheckIn.edmx.diagram">
       <DependentUpon>CheckIn.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Models\StoreLogin.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StoreLogin.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\StoreLogin.edmx.diagram">
-      <DependentUpon>StoreLogin.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -305,12 +269,10 @@
     <Content Include="Views\CheckInCounts\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Policy.cshtml" />
-    <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
     <Content Include="Views\Home\Account.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,55 +4,68 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Anime Galore</h2>
-<h4>Please check in to access our page.</h4>
 
-<p>
-    @Html.ActionLink("Check-In Here", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HPNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CheckInDay)
-        </th>
-        <th></th>
-    </tr>
+<!DOCTYPE html>
+<html lang="en">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HPNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CheckInDay)
-        </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
-        </td>*@
-    </tr>
-}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-</table>
+<body>
+
+    <header class="w3-container w3-pale-red w3-center" style="padding:105px 16px">
+        <h1 class="w3-margin w3-jumbo"> Please check in before you access our page.</h1>
+    </header>
+
+    <p>
+        <h1> @Html.ActionLink("Click here to check-in ", "Create") </h1>
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HPNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckInDay)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HPNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckInDay)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+                    </td>*@
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
+
