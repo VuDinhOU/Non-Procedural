@@ -1,4 +1,4 @@
-﻿using OnlineStore.Models;
+﻿using NonProcedural.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +15,11 @@ namespace OnlineStore.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Access(OnlineStore.Models.Login userModel)
+        public ActionResult Access(NonProcedural.Models.StoreLogin userModel)
         {
-            using (CustLog db = new CustLog())
+            using (CCLogEntities2 db = new CCLogEntities2())
             {
-                var userDetails = db.CustomerLogins.Where(x => x.Username == userModel.Username && x.Password == userModel.Password).FirstOrDefault();
+                var userDetails = db.StoreLogins;
                 if (userDetails == null)
                 {
                     userModel.LoginErrorMessage = "Wrong username/password, HINT: USERNAME/PASSWORD is admin";
